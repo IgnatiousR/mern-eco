@@ -1,8 +1,16 @@
+import { BrowserRouter, Route, Routes } from "react-router";
+import UserLayout from "./components/Layouts/UserLayout";
+
 const App = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-semibold">Hello world!</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<UserLayout />}>
+          {/* User Layout */}
+        </Route>
+        <Route>{/* Admin Layout */}</Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 

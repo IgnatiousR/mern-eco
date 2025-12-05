@@ -3,12 +3,17 @@
 
 @theme {
   --font-poppins: "Poppins", sans-serif;
+  --color-rabit-red: #ea2e0e;
 }
 
 @layer base {
   html {
     @apply font-poppins;
     font-optical-sizing: auto;
+  }
+
+  button {
+    @apply cursor-pointer;
   }
 }
 
