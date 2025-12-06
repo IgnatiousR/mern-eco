@@ -1,12 +1,7 @@
 import { IoMdClose } from "react-icons/io";
+import CartContents from "../Cart/CartContents";
 
-const CartDrawer = ({
-  drawerOpen,
-  toggleCartDrawer,
-}: {
-  drawerOpen: boolean;
-  toggleCartDrawer: () => void;
-}) => {
+const CartDrawer = ({ drawerOpen, toggleCartDrawer }: { drawerOpen: boolean; toggleCartDrawer: () => void }) => {
   // const [drawerOpen, setDrawerOpen] = useState(false);
 
   // const toggleCartDrawer = () => {
@@ -23,6 +18,21 @@ const CartDrawer = ({
         <button onClick={toggleCartDrawer}>
           <IoMdClose className="h-6 w-6 text-zinc-600" />
         </button>
+      </div>
+
+      {/* Cart contents with scrollable area */}
+      <div className="grow p-4 overflow-y-auto">
+        <h2 className="text-xl font-semibold mb-4">Your Cart</h2>
+        <CartContents />
+      </div>
+      {/* Checkout Button */}
+      <div className="p-4 bg-white sticky bottom-0">
+        <button className="w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-zinc-800 transition">
+          Checkout
+        </button>
+        <p className="text-sm tracking-tighter text-zinc-500 mt-2 text-center">
+          Shipping, Taxes and discount are calculated at checkout.
+        </p>
       </div>
     </div>
   );
