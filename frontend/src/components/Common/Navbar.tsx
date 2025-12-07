@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import SearchBar from "./SearchBar";
 import CartDrawer from "../Layouts/CartDrawer";
 import { useToggle } from "../../hooks/useToggle";
+import { IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
   // const [drawerOpen, setDrawerOpen] = useState(false);
@@ -67,12 +68,39 @@ const Navbar = () => {
             <SearchBar />
           </div>
 
-          <button className="md:hidden">
+          <button onClick={toggleNavDrawer} className="md:hidden">
             <HiBars3BottomRight className="h-6 w-6 text-zinc-700" />
           </button>
         </div>
       </nav>
       <CartDrawer drawerOpen={drawerOpen} toggleCartDrawer={toggleCartDrawer} />
+
+      {/* Mobile Nav */}
+      <div
+        className={`fixed top-0 left-0 w-3/4 sm:w-1/3 h-full bg-white shadow-lg transfrom transition-transform duration-300 z-50 ${
+          navDrawerOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className="flex justify-end p-4 ">
+          <button onClick={toggleNavDrawer}>
+            <IoMdClose className="h-6 w-6 text-zinc-600" />
+          </button>
+        </div>
+        <div className="p-4">
+          <h2 className="text-xl font-semibold mb-4">Menu</h2>
+          <nav className="space-y-4">
+            <Link to={"#"} onClick={toggleNavDrawer} className="block text-zinc-600 hover:text-black">
+              Men
+            </Link>
+            <Link to={"#"} onClick={toggleNavDrawer} className="block text-zinc-600 hover:text-black">
+              Cate 2
+            </Link>
+            <Link to={"#"} onClick={toggleNavDrawer} className="block text-zinc-600 hover:text-black">
+              Cate 3
+            </Link>
+          </nav>
+        </div>
+      </div>
     </>
   );
 };
