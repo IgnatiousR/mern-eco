@@ -1,15 +1,32 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { HiBars3BottomRight, HiOutlineShoppingBag, HiOutlineUser } from "react-icons/hi2";
 import { Link } from "react-router";
 import SearchBar from "./SearchBar";
 import CartDrawer from "../Layouts/CartDrawer";
+import { useToggle } from "../../hooks/useToggle";
 
 const Navbar = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  // const [drawerOpen, setDrawerOpen] = useState(false);
+  // const [navDrawerOpen, setNavDrawerOpen] = useState(false);
 
-  const toggleCartDrawer = () => {
-    setDrawerOpen(!drawerOpen);
-  };
+  // const toggle = (setter: React.Dispatch<React.SetStateAction<boolean>>) => {
+  //   setter((prev) => !prev);
+  // };
+
+  // const toggleNavDrawer = () => toggle(setNavDrawerOpen);
+  // const toggleCartDrawer = () => toggle(setDrawerOpen);
+
+  // const toggleNavDrawer = () => {
+  //   setNavDrawerOpen(!navDrawerOpen);
+  // };
+
+  // const toggleCartDrawer = () => {
+  //   setDrawerOpen(!drawerOpen);
+  // };
+
+  const { value: drawerOpen, toggle: toggleCartDrawer } = useToggle(false);
+  const { value: navDrawerOpen, toggle: toggleNavDrawer } = useToggle(false);
+
   return (
     <>
       <nav className="container mx-auto flex items-center justify-between px-6 py-4">
