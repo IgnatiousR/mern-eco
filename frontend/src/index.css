@@ -1,16 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
+@plugin 'tailwind-scrollbar';
 
 @theme {
   --font-exo: "Exo", sans-serif;
   --font-oxanium: "Oxanium", sans-serif;
+  --font-inter: "Inter", sans-serif;
   --color-rabit-red: #ea2e0e;
 }
 
 @layer base {
   html {
-    @apply font-exo;
+    @apply font-inter bg-zinc-200 ;
     font-optical-sizing: auto;
   }
 
