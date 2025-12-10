@@ -1,19 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 @plugin 'tailwind-scrollbar';
 
+/* @custom-variant dark (&:is(.dark *)); */
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+
 @theme {
-  --font-exo: "Exo", sans-serif;
+  --font-primary: "Inter", sans-serif;
+  /* --font-exo: "Exo", sans-serif;
   --font-oxanium: "Oxanium", sans-serif;
-  --font-inter: "Inter", sans-serif;
+  --font-inter: "Inter", sans-serif; */
   --color-rabit-red: #ea2e0e;
+  --color-background: #ea2e0e;
+  --color-background-dark: #00ff00;
 }
 
 @layer base {
+  * {
+    @apply border-zinc-300;
+  }
   html {
-    @apply font-inter bg-zinc-200 ;
+    @apply font-primary bg-zinc-200;
+    /* @apply font-primary bg-background dark:bg-background-dark; */
     font-optical-sizing: auto;
   }
 

@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="relative">
       <img
         // src={heroImg}
-        src={"https://picsum.photos/2400/1350.webp"}
+        src={"https://picsum.photos/2400/1350"}
         alt="Hero Banner"
         className="w-full h-[400px] md:h-[600px] lg:h-[750px] object-cover"
       />
