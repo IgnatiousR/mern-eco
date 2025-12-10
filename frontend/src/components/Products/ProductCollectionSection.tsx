@@ -1,6 +1,6 @@
 import { Link } from "react-router";
-import menCollectionImage from "../../assets/mens-collection.webp";
-import womenCollectionImage from "../../assets/womens-collection.webp";
+// import menCollectionImage from "../../assets/mens-collection.webp";
+// import womenCollectionImage from "../../assets/womens-collection.webp";
 
 const ProductCollectionSection = () => {
   return (
@@ -8,7 +8,8 @@ const ProductCollectionSection = () => {
       <div className="container mx-auto flex flex-col md:flex-row gap-8">
         <div className="relative flex-1">
           <img
-            src={womenCollectionImage}
+            // src={womenCollectionImage}
+            src={"https://picsum.photos/1000/1500.webp"}
             alt="women collection image"
             className="w-full h-[700px] object-cover"
           />
@@ -22,7 +23,8 @@ const ProductCollectionSection = () => {
 
         <div className="relative flex-1">
           <img
-            src={menCollectionImage}
+            // src={menCollectionImage}
+            src={"https://picsum.photos/1080/1246.webp"}
             alt="men collection image"
             className="w-full h-[700px] object-cover"
           />
