@@ -5,7 +5,7 @@ const selectedProduct = {
   description: "This is a stylish Jacket perfect for any occasion",
   brand: "FashionBrand",
   material: "Leather",
-  color: ["Black", "Red"],
+  colors: ["Black", "Red"],
   sizes: ["S", "M", "L", "XL"],
   images: [
     {
@@ -65,6 +65,40 @@ const ProductDetails = () => {
             <p className="text-lg text-zinc-600 mb-1 line-through">
               {selectedProduct.originalPrice && `${selectedProduct.originalPrice}`}
             </p>
+            <p className="text-xl text-zinc-500 mb-2">${selectedProduct.price}</p>
+            <p className="text-zinc-600 mb-4">{selectedProduct.description}</p>
+
+            <div className="mb-4">
+              <p className="text-zinc-700">Color:</p>
+              <div className="flec gap-2 mt-2">
+                {selectedProduct.colors.map((color) => (
+                  <button
+                    key={color}
+                    className="w-8 h-8 rounded-full border brightness-50"
+                    style={{
+                      backgroundColor: color.toLocaleLowerCase(),
+                      filter: "brightness(0.5)",
+                    }}
+                  ></button>
+                ))}
+              </div>
+            </div>
+
+            <div className="mb-4">
+              <p className="text-zinc-700">Size:</p>
+              <div className="flex gap-2 mt-2">
+                {selectedProduct.sizes.map((size) => (
+                  <button key={size} className="px-4 py-2 rounded border">
+                    {size}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="mb-6">
+              <p className="text-zinc-700">Quantity:</p>
+              <div className="flex items-center space-x-4 mt-2"></div>
+            </div>
           </div>
         </div>
 
