@@ -6,7 +6,7 @@ import { Toaster } from "sonner";
 const App = () => {
   return (
     <BrowserRouter>
-      <Toaster position="top-right" />
+      <Toaster richColors position="top-right" />
       <Routes>
         <Route path="/" element={<UserLayout />}>
           {/* User Layout */}
