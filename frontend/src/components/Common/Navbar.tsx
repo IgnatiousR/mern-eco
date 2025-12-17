@@ -38,16 +38,19 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex space-x-6">
-          <Link to={"#"} className="text-zinc-700 hover:text-black text-sm font-medium uppercase">
+          <Link
+            to="/collections/all"
+            className="text-zinc-700 hover:text-black text-sm font-medium uppercase"
+          >
             Men
           </Link>
-          <Link to={"#"} className="text-zinc-700 hover:text-black text-sm font-medium uppercase">
+          <Link to="#" className="text-zinc-700 hover:text-black text-sm font-medium uppercase">
             Women
           </Link>
-          <Link to={"#"} className="text-zinc-700 hover:text-black text-sm font-medium uppercase">
+          <Link to="#" className="text-zinc-700 hover:text-black text-sm font-medium uppercase">
             Top Wear
           </Link>
-          <Link to={"#"} className="text-zinc-700 hover:text-black text-sm font-medium uppercase">
+          <Link to="#" className="text-zinc-700 hover:text-black text-sm font-medium uppercase">
             Bottom Wear
           </Link>
         </div>
@@ -89,13 +92,25 @@ const Navbar = () => {
         <div className="p-4">
           <h2 className="text-xl font-semibold mb-4">Menu</h2>
           <nav className="space-y-4">
-            <Link to={"#"} onClick={toggleNavDrawer} className="block text-zinc-600 hover:text-black">
+            <Link
+              to={"#"}
+              onClick={toggleNavDrawer}
+              className="block text-zinc-600 hover:text-black"
+            >
               Men
             </Link>
-            <Link to={"#"} onClick={toggleNavDrawer} className="block text-zinc-600 hover:text-black">
+            <Link
+              to={"#"}
+              onClick={toggleNavDrawer}
+              className="block text-zinc-600 hover:text-black"
+            >
               Cate 2
             </Link>
-            <Link to={"#"} onClick={toggleNavDrawer} className="block text-zinc-600 hover:text-black">
+            <Link
+              to={"#"}
+              onClick={toggleNavDrawer}
+              className="block text-zinc-600 hover:text-black"
+            >
               Cate 3
             </Link>
           </nav>
