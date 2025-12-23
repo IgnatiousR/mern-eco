@@ -80,7 +80,52 @@ const Checkout = () => {
               value={shippingAddress.address}
               onChange={(e) => setShippingAddress({ ...shippingAddress, address: e.target.value })}
               className="w-full p-2 border rounded"
+              required
             />
+          </div>
+          <div className="mb-4 grid grid-cols-2 gap-4">
+            <div>
+              <label className="block text-zinc-700">City</label>
+              <input
+                type="text"
+                value={shippingAddress.city}
+                onChange={(e) => setShippingAddress({ ...shippingAddress, city: e.target.value })}
+                className="w-full p-2 border rounded"
+              />
+            </div>
+            <div>
+              <label className="block text-zinc-700">Postal Code</label>
+              <input
+                type="text"
+                value={shippingAddress.postalCode}
+                onChange={(e) =>
+                  setShippingAddress({ ...shippingAddress, postalCode: e.target.value })
+                }
+                className="w-full p-2 border rounded"
+              />
+            </div>
+          </div>
+          <div className="mb-4 grid grid-cols-2 gap-4">
+            <div>
+              <label className="block text-zinc-700">Country</label>
+              <input
+                type="text"
+                value={shippingAddress.country}
+                onChange={(e) =>
+                  setShippingAddress({ ...shippingAddress, country: e.target.value })
+                }
+                className="w-full p-2 border rounded"
+              />
+            </div>
+            <div>
+              <label className="block text-zinc-700">Phone</label>
+              <input
+                type="tel"
+                value={shippingAddress.phone}
+                onChange={(e) => setShippingAddress({ ...shippingAddress, phone: e.target.value })}
+                className="w-full p-2 border rounded"
+              />
+            </div>
           </div>
         </form>
       </div>
